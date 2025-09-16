@@ -13,7 +13,7 @@ print("2.   Exercícios");
 print("3.   Feedback");
 print("4.   Ranking");
 print("5.   Cadastro");
-
+print("6. Sair");
 ------------------------------------
 def login():
 login = input("insira o seu nome);
@@ -23,46 +23,95 @@ senha = input("insira a sua senha);
 print(f"Olá, {login}! Bem-vindo ao Grampa!);
 
 ------------------------------------------
+
 def exibir_lista_exercicios():
+
+listas = [crase, substantivo, ortografia]
+print("selecione a atividade:")
+for i, exercicio in enumarate(listas, 1):
+    print(f"{i}. {exercicio}")
+try:
+    escolha = int(input("digite o número da atividade:"))
+    if 1 ()
+    print(f"você escolheu: {listas[escolha-1]}")
+    ##aqui é a função específica do exercício
+
+else:
+    print("opção invalida!")
+except valueerror:
+    print("digite um número válido")
+
+
 ----------------------------------------
+
 def  exercícios():
+
+#procurar dicas de como desenvolver atividades#
+
+print("Área de Exercícios")
+exibir_lista_exercicios()
+
+#aqui você pode adicionar a lógica dos exercícios ---
+
+
+
 ----------------------------------------
 def exibir_feedbacks():
+
+print("Área de feedback");
+print("Funcionalidade em desenvolvimento");
+print("_" * 30);
 -----------------------------------------
 def exibir_novo_cadastro():
+
+print("Ára de cadastro")
+nome = input("digite seu nome:")
+email = input("digite seu email:")
+senha = input("crie uma senha:")
+print(f"cadastro realizado para {nome}!")
+print("_" * 30)
 -------------------------------------------
 
 
 
-def escolha_a_opcao():
+def opcao_invalida():
+    print("Opção inválida! Tente novamente.")
+    print("-" * 30)
 
-try:
-    def opcaoescolhida = int(input("escolha uma opcao:"))
+def escolher_opcao():
+    try:
+        opcao_escolhida = int(input("Escolha uma opção: "))
+        print("-" * 30)
 
-    if opcaoescolhida == 1:
-        cadastrar_login():
-    elif opcaoescolhida == 2:
-        listar_exercicio():
-    elif opcaoescolhida == 3:
-        listar_feedback():
-    elif opcaoescolhida == 4:
-        listar_ranking():
-    elif opcaoescolhida == 5:
-        realizar_outro_cadastro():
+        if opcao_escolhida == 1:
+            login()
+        elif opcao_escolhida == 2:
+            exercicios()
+        elif opcao_escolhida == 3:
+            exibir_feedbacks()
+        elif opcao_escolhida == 4:
+            exibir_ranking()
+        elif opcao_escolhida == 5:
+            exibir_novo_cadastro()
+        elif opcao_escolhida == 6:
+            print("Saindo do sistema...")
+            return False
+        else:
+            opcao_invalida()
 
-    else: opcao_invalida()
+        return True
 
-except: 
-    opcao_invalida()
+    except ValueError:
+        opcao_invalida()
+        return True
 
+def main():
+    exibir_nome_software()
 
-Finalizar
+    while True:
+        exibir_opcoes()
+        if not escolher_opcao():
+            break
 
-def main()
-    exibir nome do programa
-    exibir opcoes 
-    escolher opcao
-
-
-if __name__ == '__main__:
+if __name__ == '__main__':
     main()
